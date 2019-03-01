@@ -4,4 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="carService" class="com.javastudio.school.service.CarServiceImpl"/>
+
+    <bean id="beanHasNoDefaultConstructor" class="com.javastudio.school.service.BeanHasNoDefaultConstructor">
+        <constructor-arg name="value1" value="Greeting"/>
+        <constructor-arg name="value2" value="Hello"/>
+    </bean>
 </beans>

@@ -1,22 +1,13 @@
 package com.javastudio.school;
 
-import com.javastudio.school.service.CarService;
-import com.javastudio.school.util.Spring;
+import com.javastudio.school.sample.SimpleSpring;
 
 public class Startup {
     public static void main(String[] args) {
 
-        try {
+        SimpleSpring spring = new SimpleSpring();
 
-            while (true) {
-                CarService carService = (CarService) Spring.getBean("carService");
-                carService.start();
-
-                Thread.sleep(1000);
-            }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // spring.startSpringContext();
+        spring.beanHasNoDefaultConstructor();
     }
 }
